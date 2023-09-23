@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                mvn --version
             }
         }
         stage('Send Email') {
@@ -13,7 +13,7 @@ pipeline {
                     def content = readFile 'Readme.txt'
                     emailext (
                         to: 'jrssjtrunksjr@gmail.com',
-                        subject: "New Commit in Repo: ${env.JOB_NAME}",
+                        subject: "New Commit in Repo",
                         body: "Contents of Readme.txt:\n\n${content}"
                     )
                 }
