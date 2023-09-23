@@ -12,7 +12,7 @@ pipeline {
                 script {
                     def content = readFile 'Readme.txt'
                     emailext (
-                        to: 'jrssjtrunksjr@gmail.com',
+                        to: 'amineayadi286@gmail.com',
                         subject: "New Commit in Repo",
                         body: "Contents of Readme.txt:\n\n${content}"
                     )
