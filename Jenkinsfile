@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                mvn --version
+                 checkout scm
             }
         }
         stage('Send Email') {
